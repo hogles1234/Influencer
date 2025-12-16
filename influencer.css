@@ -73,10 +73,10 @@ body {
 
 /* welcome Section */
 .welcome {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     min-height: 100vh;
     padding: 120px 8% 64px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 64px;
     background: linear-gradient(135deg, #fff 0%, #fef5f5 100%);
@@ -214,131 +214,152 @@ gap:24px;
 
 /* contacts section (SOCMED)*/
 .team-grid {
-display: grid;
-grid-template-columns: repeat(4, 1fr);
-gap: 32px; 
-margin-top: 48px;
-max-width: 1100px;
-margin-left: auto;
-margin-right: auto;
-        }
-.team-card {
-text-align: center;
-transition: transform 0.3s;
-position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 32px; 
+    margin-top: 48px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto; 
 }
-.team-card:hover {
- transform: translateY(-10px);
+
+
+.team-brand-card:nth-child(1) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.team-brand-card:nth-child(2) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.team-brand-card:nth-child(4) {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.team-brand-card:nth-child(5) {
+    grid-column: 4;
+    grid-row: 2;
+}
+.team-brand-card {
+    text-align: center;
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.team-brand-card:hover {
+    transform: translateY(-10px);
 }
 
 .team-main {
-grid-column: 2 / 4;
-grid-row: 1;
+    grid-column: 2 / 4;
+    grid-row: 1;
 }
 
-.team-card:nth-child(1) {
-grid-column: 1;
-grid-row: 2;
- }
-
-.team-card:nth-child(2) {
-grid-column: 2;
-grid-row: 2;
+.team-brand-card:nth-child(1) {
+    grid-column: 1;
+    grid-row: 2;
 }
 
-.team-card:nth-child(4) {
-grid-column: 3;
-grid-row: 2;
+.team-brand-card:nth-child(2) {
+    grid-column: 2;
+    grid-row: 2;
 }
 
-.team-card:nth-child(5) {
-grid-column: 4;
-grid-row: 2;
+.team-brand-card:nth-child(4) {
+    grid-column: 3;
+    grid-row: 2;
 }
 
-.team-image {
-width: 100%;
-aspect-ratio: 1;
-background: linear-gradient(135deg, #ffcccc, #ff9999);
-border-radius: 15px;
-margin-bottom: 20px;
-border: 3px solid #ffe5e5;
-transition: all 0.3s;
-position: relative;
-overflow: hidden;
+.team-brand-card:nth-child(5) {
+    grid-column: 4;
+    grid-row: 2;
 }
 
-.team-image-main {
-border: 4px solid #e83c91;
-box-shadow: 0 20px 60px rgba(255, 153, 153, 0.3);
+.team-brand-image {
+    width: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #ffcccc, #ff9999);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 3px solid #ffe5e5;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
 }
 
-.team-card:hover .team-photo {
-border-color:  #e83c91;
-box-shadow: 0 15px 40px rgba(255, 153, 153, 0.2);
+.team-brand-image-main {
+    border: 4px solid #e83c91;
+    box-shadow: 0 20px 60px rgba(255, 153, 153, 0.3);
+}
+
+.team-brand-card:hover .team-image {
+    border-color:  #e83c91;
+    box-shadow: 0 15px 40px rgba(255, 153, 153, 0.2);
 }
 
 .team-social {
-position: absolute;
-bottom: 0;
-left: 0;
-right: 0;
-background: rgba(255, 255, 255, 0.95);
- padding: 12px;
-display: flex;
-justify-content: center;
-gap: 12px;
-transform: translateY(100%);
-transition: transform 0.3s;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    transform: translateY(100%);
+    transition: transform 0.3s;
 }
 
-.team-card:hover .team-social {
-transform: translateY(0);
+.team-brand-card:hover .team-social {
+    transform: translateY(0);
 }
 
 .team-social-icon {
-width: 40px;
-height: 40px;
-border-radius: 50%;
-background: #fef5f5;
- border: 2px solid  #e83c91;
-display: flex;
-align-items: center;
-justify-content: center;
-color: #1a1a1a;
-text-decoration: none;
-font-size: 11px;
-transition: all 0.3s;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fef5f5;
+    border: 2px solid  #e83c91; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 11px;
+    transition: all 0.3s;
 }
 .team-social-icon:hover {
-background:  #2d2d2d;
-color: white;
-transform: scale(1.1);
+    background:  #2d2d2d;
+    color: white;
+    transform: scale(1.1);
 }
 
-.team-info {
-padding: 0 12px;
+.team-brand-info {
+    padding: 0 12px;
 }
-.team-name {
-font-size: 20px;
-color: #2d2d2d;
-margin-bottom: 8px;
+.team-brand-name {
+    font-size: 20px;
+    color: #2d2d2d;
+    margin-bottom: 8px;
   font-weight: 400;
- }
-
-.team-main .team-name {
-font-size: 24px;
-color: #e83c91;
 }
-.team-role {
+.team-brand-main .team-brand-name {
+    font-size: 24px;
+    color: #e83c91;
+}
+.team-brand-role {
  color: #666;
-font-size: 14px;
-letter-spacing: 1px;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
-.team-main .team-role {
-color:  #e83c91;
-font-weight: 500;
+.team-brand-main .team-brand-role {
+    color:  #e83c91;
+    font-weight: 500;
 }
 /* contact section (EMAIL)*/
 .contact-email-section {
@@ -569,32 +590,88 @@ section{
    text-align: justify;
 }
 /*brand section*/
-.brands-section {
-    background: #fef5f5;
-    padding: 80px 8%;
-}
-.brands-grid {
+.brand-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 36px;
-    margin-top: 48px;   
+    grid-template-columns: repeat(3, 2fr);
+    gap: 32px; 
+    margin-top: 48px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto; 
+}
+.brand-main {
+    grid-column: 2;
+    grid-row: 1;
 }
 
-.brand-card {
-    background: #fef5f5;
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #ffe5e5;
-    border-radius: 15px;
-    transition: all 0.3s;
-    font-weight: 400;
-    font-size: 18px;
-}
 .brand-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.brand-card:nth-child(1) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.brand-card:nth-child(2) {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.brand-card:nth-child(4) {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+.brand-card:nth-child(5) {
+    grid-column: 4;
+    grid-row: 2;
+}
+
+.brand-image {
+    width: 100%;
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #ffcccc, #ff9999);
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 3px solid #ffe5e5;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-image-main {
+    border: 4px solid #e83c91;
+    box-shadow: 0 20px 60px rgba(255, 153, 153, 0.3);
+}
+
+.brand-card:hover .brand-image {
+    border-color:  #e83c91;
+    box-shadow: 0 15px 40px rgba(255, 153, 153, 0.2);
+}
+
+.brand-info {
+    padding: 0 12px;
+}
+.brand-name {
+    font-size: 20px;
+    color: #2d2d2d;
+    margin-bottom: 8px;
+  font-weight: 400;
+}
+.brand-main .brand-name {
+    font-size: 24px;
+    color: #e83c91;
+}
+.brand-role {
+ color: #666;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.brand-main .brand-role {
+    color:  #e83c91;
+    font-weight: 500;
 }
 /*shop section*/
 .shop-section {
@@ -677,7 +754,7 @@ section{
 }
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
     margin-top: 48px;
 }
@@ -766,7 +843,7 @@ section{
 }
 /*STATS SECTION*/
 .stats-section {
-    background: #fef5f5;
+    background: white;
     padding: 80px 8%;
     text-align: center;
 }
@@ -812,23 +889,13 @@ section{
 
 /* about me section */
 .about-cont {
-    margin-top: 60px;   
+    margin-top: 20px;   
 }
-
-.about-preview p {
-    font-size: 30px;
-    max-width: 600px; /* to limit the width of the paragraph */
-    margin: auto;
-    padding: 50px 50px;
-    color: #43334c;
-}
-
-/*about section*/ 
 
 /*about section killua 4:00AM NA*/
 .about-section{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     align-items: center;
     gap: 80px;
 }
@@ -844,15 +911,15 @@ section{
 }
 .about-stats {
     position: absolute;
-    bottom: 30px;
-    right: 30px;
+    top: 30px;
+    right: 40px;
     background: white;
-    padding: 32px;
+    padding: 24px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 .about-stats-number{
-    font-size: 40px;
+    font-size: 24px;
     font-weight: 400;
     color: #e83c91;
 }
@@ -873,7 +940,7 @@ section{
 .about{
     background: linear-gradient(135deg, #fff 0%, #fef5f5 100%);
     color: #333;
-    padding: 120px 20px;
+    padding: 100px 20px;
     text-align: center;
 }
 
@@ -971,4 +1038,211 @@ section{
     align-items: center;
     gap: 20px;
     flex-wrap: wrap; /* allows wrapping only when needed on small screens */
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) {
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .team-main {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    .team-brand-card:nth-child(1) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .team-brand-card:nth-child(2) {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .team-brand-card:nth-child(4) {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .team-brand-card:nth-child(5) {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .contact-email-form {
+        padding: 48px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .footer-socmed-grid {
+        margin: 0 auto;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 10px 5px;
+    }
+
+    .navbar .container {
+        padding: 0 10px;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        width: 100%;
+        gap: 8px;
+        padding: 10px 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+
+    .contactbtn {
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+
+    section {
+        padding: 48px 5%;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 0 20px;
+    }
+
+    .team-main {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .team-brand-card:nth-child(1),
+    .team-brand-card:nth-child(2),
+    .team-brand-card:nth-child(4),
+    .team-brand-card:nth-child(5) {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .team-brand-image {
+        max-width: 300px;
+        margin: 0 auto 20px;
+    }
+
+    .team-brand-name {
+        font-size: 18px;
+    }
+
+    .team-brand-role {
+        font-size: 13px;
+    }
+
+    .contact-email-form {
+        padding: 32px 24px;
+    }
+
+    .contact-label {
+        font-size: 12px;
+    }
+
+    .contact-email {
+        font-size: 16px;
+    }
+
+    .btn1 {
+        width: 100%;
+        padding: 14px 32px;
+        font-size: 18px;
+    }
+
+    .footer {
+        padding: 48px 20px 32px;
+    }
+
+    .footer-container h1 {
+        font-size: 24px;
+    }
+
+    .footer-container p {
+        font-size: 14px;
+    }
+
+    .footer-socmed-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .footer-social-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+        padding: 12px 20px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 24px;
+    }
+
+    .section-subtitle {
+        font-size: 14px;
+    }
+
+    .team-brand-image {
+        max-width: 250px;
+    }
+
+    .team-social-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .contact-email-form {
+        padding: 24px 16px;
+    }
+
+    .contact-email {
+        font-size: 14px;
+    }
+
+    .btn1 {
+        font-size: 16px;
+        padding: 12px 24px;
+    }
+
+    .footer-socmed-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 200px;
+    }
 }
