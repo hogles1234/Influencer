@@ -513,7 +513,7 @@ section{
 }
 .media-image {
     width: 100%;
-    height: 200px;
+    height: 275px;
     background: linear-gradient(135deg, #ffcccc 0%, #ff9999 100%);
 }
 .media-content {
@@ -542,7 +542,7 @@ section{
 /*portfolio part 3 Featured*/
 .featured-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 32px;
     margin-top: 48px;
 }
@@ -564,7 +564,11 @@ section{
 .featured-image {
     width: 100%;
     height: 200px;
-    background: linear-gradient(135deg, #ffcccc 0%, #ff9999 100%);
+    background: linear-gradient(135deg, #fff 0%, #ffe5e5 100%);
+}
+.featured-image:hover {
+    background: #ff9999;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 .featured-content {
     padding: 24px;
@@ -673,79 +677,7 @@ section{
     color:  #e83c91;
     font-weight: 500;
 }
-/*shop section*/
-.shop-section {
-    background: linear-gradient(135deg, #fff 0%, #fef5f5 100%);
-    padding: 80px 8%;
-    text-align: center;
-}
-.shop-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-    margin-top: 48px;
-}
-.shop-card {
-    background: linear-gradient(135deg, #fff 0%, #fef5f5 100%);
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border:2px solid #ffe5e5;
-    transition: all 0.3s;
-}
-.shop-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-.shop-image {
-    width: 100%;
-    height: 350px;
-    background: linear-gradient(135deg, #ffcccc 0%, #ff9999 100%);
-    position: relative;
-}
-.shop-content {
-    padding: 32px;
-    text-align: center;
-}
-.shop-title {
-    font-size: 20px;
-    color: #2d2d2d;
-    margin-bottom: 16px;
-    font-weight: 500;
-}
-.shop-tag {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    background: #e83c91;
-    color: white;
-    padding: 8px 12px;
-    border-radius: 15px;
-    font-size: 14px;
-    letter-spacing: 2px;
-}
-.shop-description {
-    font-size: 24px;
-    color: #666;
-    margin-bottom: 24px;
-    line-height: 1.6;
-}
-.shop-btn{
-    display: inline-block;  
-    background: #e83c91;
-    color: white;
-    padding: 12px 24px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 18px;
-    transition: all 0.3s;
-}
-.shop-btn:hover {
-    background: black;
-    transform: scale(1.05);
-    font-size: 20px;
-}
+
 /*services section*/
 .service-section {
     background: linear-gradient(135deg, #fff 0%, #fef5f5 100%);
@@ -754,7 +686,7 @@ section{
 }
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 32px;
     margin-top: 48px;
 }
@@ -770,11 +702,10 @@ section{
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
-.service-image {
-    width: 100%;
-    height: 350px;
-    background: linear-gradient(135deg, #ffcccc 0%, #ff9999 100%);
-    position: relative;
+.service-icon {
+    width: 70px;
+    height: 70px;
+    align-items:center;
 }
 .service-content {
     padding: 32px;
@@ -798,9 +729,11 @@ section{
     letter-spacing: 2px;
 }
 .service-description {
-    font-size: 24px;
+    font-size: 16px;
     color: #666;
     margin-bottom: 24px;
+    text-align: justify;
+    justify-content: center;
     line-height: 1.6;
 }
 .service-btn{
@@ -866,8 +799,9 @@ section{
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 .stat-icon {
-    font-size:32px;
-    margin-bottom: 16px;
+    width: 50px;
+    height: 50px;
+    align-items:center;
 }
 .stat-number{
     font-size: 48px;
@@ -887,72 +821,6 @@ section{
     line-height: 1.6;
 }
 
-/* about me section */
-.about-cont {
-    margin-top: 20px;   
-}
-
-/*about section killua 4:00AM NA*/
-.about-section{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 80px;
-}
-
-.about-image {
-    width: 100%;
-    height: 600px;
-    overflow:hidden;
-    background: linear-gradient(135deg, #ffcccc 0%, #ff9999 100%);
-    border-radius: 20px;
-    position: relative;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-.about-stats {
-    position: absolute;
-    top: 30px;
-    right: 40px;
-    background: white;
-    padding: 24px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-.about-stats-number{
-    font-size: 24px;
-    font-weight: 400;
-    color: #e83c91;
-}
-.about-content h2 {
-    font-size: 40px;
-    margin-bottom: 32px;
-    color: #2d2d2d;
-    line-height: 1.3;
-    font-weight: 400;
-}
-.about-content p {
-    font-size: 20px;
-    color: #666;
-    margin-bottom: 24px;
-    line-height: 1.6;
-}
-/* about tan */
-.about{
-    background: linear-gradient(135deg, #fff 0%, #fef5f5 100%);
-    color: #333;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-.about-cont h2 {
-    font-size: 40px;
-    margin-bottom: 25px;
-}
-
-.about-cont p {
-    font-size: 20px;
-    margin-bottom: 25px;
-}
 
 /*For contact me*/
 
